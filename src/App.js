@@ -7,13 +7,15 @@ import Player from "./component/Player/Player";
 import Search from "./component/Search/Search";
 import Main from "./component/Main";
 import * as RouteConstant from "./constants/RouteConstant";
-
+import "./App.css";
+import Auth from "./utils/auth";
 function App() {
+  Auth.setTokenToSpotify();
   return (
     <div className="app">
-      <div className="app__container">
+      <div className="container">
         <Navbar />
-        <div className="app__content">
+        <div className="content">
           <Search />
           <Main />
           <Routes>
